@@ -29,13 +29,29 @@ var Eventos=(function(){
         obj.addEventListener("keyup",f,false);
         return obj;
       };
+    var mouse_encima=function(obj,f){
+        obj.addEventListener("mouseenter",f,false);
+        return obj;
+      };
+    var mouse_fuera=function(obj,f){
+          obj.addEventListener("mouseleave",f,false);
+          return obj;
+        };
+
+      var select=function(obj,f){
+            obj.addEventListener("select",f,false);
+            return obj;
+          };
   return{"click":click,
           "double_click":double_click,
           "enfoque":enfoque,
           "desenfoque":desenfoque,
           "input":input,
           "pres_tecla":pres_tecla,
-          "soltar_tecla":soltar_tecla
+          "soltar_tecla":soltar_tecla,
+          "mouse_encima":mouse_encima,
+          "mouse_fuera":mouse_fuera,
+          "select":select
   };
 
 
